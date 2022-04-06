@@ -1,19 +1,21 @@
 import * as React from 'react';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
-import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar } from '@mui/material';
+import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar, Card } from '@mui/material';
+import {Logo} from "./logo";
 
 
 
 //handling the login form
 function SignIn() {
+
     return (
-        <>
+        <Card>
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
-                <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
-                    <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
-                        <LockOpenTwoToneIcon />
-                    </Avatar>
+                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+                    <div>
+                        <Logo/>
+                    </div>
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
@@ -22,7 +24,7 @@ function SignIn() {
                         <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
                         <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password"/>
                         <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
-                        <Button type="submit" fullWidth variant="contained" href="/MazeGame" sx={{ mt: 3, mb: 2 }}>
+                        <Button type="submit" style={{backgroundColor: "#629460"}} fullWidth variant="contained" href="/MazeGame" sx={{ mt: 3, mb: 2 }}>
                             Sign In
                         </Button>
                         <Grid container>
@@ -40,7 +42,7 @@ function SignIn() {
                     </Box>
                 </Box>
             </Container>
-        </>
+        </Card>
     );
 }
 

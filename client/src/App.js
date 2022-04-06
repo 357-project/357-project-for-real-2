@@ -4,6 +4,7 @@ import './App.css';
 import MazeGame from "./Games/MazeGame";
 import SignIn from "./Authentication/SignIn";
 import SignUp from "./Authentication/SignUp";
+import {Logo} from "./Authentication/logo";
 
 class App extends Component {
     render() {
@@ -19,6 +20,9 @@ class App extends Component {
                         </Route>
                         <Route path="/SignUp">
                             <SignUp/>
+                        </Route>
+                        <Route path="/logo">
+                            <Logo/>
                         </Route>
                     </Switch>
                 </div>
