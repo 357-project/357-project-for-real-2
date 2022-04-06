@@ -21,12 +21,20 @@ function SignIn() {
                     </Typography>
                     <Box sx={{ mt: 1 }}>
                         {/* Getting the email and password from user */}
-                        <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
-                        <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password"/>
-                        <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
-                        <Button type="submit" style={{backgroundColor: "#629460"}} fullWidth variant="contained" href="/MazeGame" sx={{ mt: 3, mb: 2 }}>
-                            Sign In
-                        </Button>
+                        <Grid container>
+                            <Grid item xs={12} sx={{ my: 2 }}>
+                                <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />
+                            </Grid>
+                            <Grid item xs={12} sx={{ my: 2 }}>
+                                <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password"/>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button type="submit" style={{backgroundColor: "#629460"}} fullWidth variant="contained" href="/MazeGame" sx={{ mt: 3, mb: 2 }}>
+                                    Sign In
+                                </Button>
+                            </Grid>
+
+                        </Grid>
                         <Grid container>
                             <Grid item xs>
                                 <Link href="#" variant="body2">
