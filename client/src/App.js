@@ -5,6 +5,7 @@ import MazeGame from "./Games/MazeGame";
 import SignIn from "./Authentication/SignIn";
 import SignUp from "./Authentication/SignUp";
 import {Logo} from "./Authentication/logo";
+import MemoryGame from "./Games/FirstGame";
 
 class App extends Component {
     render() {
@@ -23,6 +24,9 @@ class App extends Component {
                         </Route>
                         <Route path="/logo">
                             <Logo/>
+                        </Route>
+                        <Route path="/MemoryGame">
+                            <MemoryGame/>
                         </Route>
                     </Switch>
                 </div>
