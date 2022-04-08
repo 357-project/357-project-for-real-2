@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar, Card } from '@mui/material';
 
 
 import GameER from 'phaser-maze-game';
@@ -8,7 +9,12 @@ class MazeGame extends Component {
     render() {
         return (
             <div className="App">
-                <GameER/>
+                <Container component="main" maxWidth="xs">
+                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '15rem'}}>
+                    <GameER/>
+                    </Box>
+                </Container>
+                
             </div>
         );
     }

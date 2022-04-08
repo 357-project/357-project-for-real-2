@@ -6,11 +6,9 @@ import {Logo} from "./logo";
 function SignUp() {
 
     return (
-
-        <Card>
             <Container component="main" maxWidth="xs">
-                <CssBaseline />
-                <Box sx={{ marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+                <br/><br/><br/>
+                <Box sx={{ marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '15rem'}}>
                     <div>
                         <Logo/>
                     </div>
@@ -53,7 +51,6 @@ function SignUp() {
                     </Box>
                 </Box>
             </Container>
-        </Card>
     );
 }
 

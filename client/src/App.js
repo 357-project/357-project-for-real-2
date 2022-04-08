@@ -2,16 +2,24 @@ import React, { Component } from 'react'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
 import MazeGame from "./Games/MazeGame";
+import CssBaseline from '@mui/material/CssBaseline';
+
 import SignIn from "./Authentication/SignIn";
 import SignUp from "./Authentication/SignUp";
 import {Logo} from "./Authentication/logo";
 import MemoryGame from "./Games/FirstGame";
+import Footer from './Components/Footer.js';
+import Navbar from './Components/Navbar.js';
+
 
 class App extends Component {
     render() {
         return (
+            <div>
+            <Navbar/>
+            {/* <div>
+                <div> */}
             <Router>
-                <div>
                     <Switch>
                         <Route path="/MazeGame">
                             <MazeGame/>
@@ -29,8 +37,13 @@ class App extends Component {
                             <MemoryGame/>
                         </Route>
                     </Switch>
-                </div>
+                    
+                <br/>
             </Router>
+            {/* </div>
+            </div> */}
+            <Footer/>
+            </div>
         );
     }
 }
