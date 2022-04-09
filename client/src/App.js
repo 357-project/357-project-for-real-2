@@ -10,19 +10,23 @@ import {Logo} from "./Authentication/logo";
 import MemoryGame from "./Games/FirstGame";
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.js';
-
+import HomePage from './Pages/WelcomePage';
+import Questionaire from './Pages/Questionaire';
 
 class App extends Component {
     render() {
         return (
             <div>
             <Navbar/>
-            {/* <div>
-                <div> */}
+            <div>
             <Router>
+                <CssBaseline/>
                     <Switch>
                         <Route path="/MazeGame">
                             <MazeGame/>
+                        </Route>
+                        <Route path="/Questionaire">
+                            <Questionaire/>
                         </Route>
                         <Route path="/SignIn">
                             <SignIn/>
@@ -36,12 +40,14 @@ class App extends Component {
                         <Route path="/MemoryGame">
                             <MemoryGame/>
                         </Route>
+                        <Route path="/">
+                            <HomePage/>
+                        </Route>
                     </Switch>
                     
                 <br/>
             </Router>
-            {/* </div>
-            </div> */}
+            </div>
             <Footer/>
             </div>
         );
