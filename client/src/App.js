@@ -10,6 +10,7 @@ import {Logo} from "./Authentication/logo";
 import MemoryGame from "./Games/FirstGame";
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.js';
+import {TimePage} from "./Components/timePage";
 
 
 class App extends Component {
@@ -36,6 +37,10 @@ class App extends Component {
                         <Route path="/MemoryGame">
                             <MemoryGame/>
                         </Route>
+                        <Route
+                            path="/timepage"
+                            component={(props) => <TimePage {...props} />}
+                        />
                     </Switch>
                     
                 <br/>

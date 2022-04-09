@@ -1,23 +1,35 @@
 import React, { Component } from 'react'
 import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar, Card } from '@mui/material';
-
+import { useHistory } from "react-router-dom";
 
 import GameER from 'phaser-maze-game';
 import '../App.css';
+import {TimePage} from "../Components/timePage";
 
-class MazeGame extends Component {
-    render() {
+function MazeGame(){
+
+    const t = new Date().getTime();
+    console.log(t);
+    const history = useHistory();
+
+    const onSubmit = ()=> {
+        const time = ((new Date().getTime() - t) / 1000);
+        history.push({
+            pathname: '/timepage',
+            state: {time: time}
+        });
+    }
+
         return (
             <div className="App">
-                <Container component="main" maxWidth="xs">
-                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '15rem'}}>
+                <Container component="main" maxWidth="xs" sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '20rem', mb:'1rem'}}>
                     <GameER/>
                     </Box>
+                    <Button sx={{size: "large"}} onClick={onSubmit}>CLICK WHEN DONE</Button>
                 </Container>
-                
             </div>
         );
-    }
 }
 
 export default MazeGame;

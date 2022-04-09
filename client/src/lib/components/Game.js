@@ -2,11 +2,14 @@ import React from "react";
 import Card from "./Card";
 import {cardsData} from '../data/cards'
 import "../assets/css/index.css";
+import { useHistory } from "react-router-dom";
 
 class Game extends React.Component {
+
   constructor(){
 
     super();
+
     this.state={
       cards:cardsData,
       lastchangedCard:null,
