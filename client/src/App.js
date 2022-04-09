@@ -10,20 +10,28 @@ import {Logo} from "./Authentication/logo";
 import MemoryGame from "./Games/FirstGame";
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.js';
+<<<<<<< HEAD
 import {TimePage} from "./Components/timePage";
 
+=======
+import HomePage from './Pages/WelcomePage';
+import Questionaire from './Pages/Questionaire';
+>>>>>>> 18a6fb7478fe767e601f4a457d1da58f928dfbca
 
 class App extends Component {
     render() {
         return (
             <div>
             <Navbar/>
-            {/* <div>
-                <div> */}
+            <div>
             <Router>
+                <CssBaseline/>
                     <Switch>
                         <Route path="/MazeGame">
                             <MazeGame/>
+                        </Route>
+                        <Route path="/Questionaire">
+                            <Questionaire/>
                         </Route>
                         <Route path="/SignIn">
                             <SignIn/>
@@ -41,12 +49,13 @@ class App extends Component {
                             path="/timepage"
                             component={(props) => <TimePage {...props} />}
                         />
+                        <Route path="/">
+                            <HomePage/>
+                        </Route>
                     </Switch>
-                    
                 <br/>
             </Router>
-            {/* </div>
-            </div> */}
+            </div>
             <Footer/>
             </div>
         );

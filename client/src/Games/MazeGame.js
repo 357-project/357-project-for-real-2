@@ -23,7 +23,7 @@ function MazeGame(){
         return (
             <div className="App">
                 <Container component="main" maxWidth="xs" sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '20rem', mb:'1rem'}}>
+                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '14rem', mb:'1rem'}}>
                     <GameER/>
                     </Box>
                     <Button sx={{size: "large"}} onClick={onSubmit}>CLICK WHEN DONE</Button>
