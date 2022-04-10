@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 
 function Footer() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '20vh', textAlign: 'center',  width:"100rem" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '20vh', textAlign: 'center',  width:"90rem" }}>
       {/* Adding the theme for the footer */}
       <Box component="footer" sx={{
         py: 6, px: 2, mt: 'auto',
