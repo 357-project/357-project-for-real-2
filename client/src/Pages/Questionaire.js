@@ -59,7 +59,7 @@ function Questionaire() {
             {/* Box for any comments */}
             <FormControl>
               <FormLabel id="symptoms" sx={{ mb: 3 }}>Any Additional Comments (Optional)?</FormLabel>
-              <TextField id="symptoms" multiline rows={4} label="Enter Any Other Symptoms Here" variant="filled" name="symptoms" sx={{ width: 350 }}/>
+              <TextField id="symptoms" multiline rows={4} label="Enter Any Other comments Here" variant="filled" name="symptoms" sx={{ width: 350 }}/>
             </FormControl>
           </div>
           <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }}>
