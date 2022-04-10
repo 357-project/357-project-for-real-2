@@ -105,7 +105,7 @@ function Navbar() {
                             <Badge color="secondary" badgeContent={count}>
                                 <Tooltip title="Open settings">
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                        <Avatar alt="Remy Sharp" src="https://www.clipartmax.com/png/middle/344-3449008_vector-avatars-circle-avatar.png" />
+                                        <Avatar alt="Remy Sharp" src="https://cdn.imgbin.com/2/22/6/imgbin-computer-icons-child-avatar-child-JD66g32bvXprtr3FhWy2vPSzL.jpg" />
                                     </IconButton>
                                 </Tooltip>
                             </Badge>
