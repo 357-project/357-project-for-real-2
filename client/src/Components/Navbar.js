@@ -7,10 +7,11 @@ import { useEffect } from "react";
 const pages = ['Home', 'Maze Game', 'Memory Game'];
 const settings = ['Profile', 'Statistics', 'Logout'];
 
-function Navbar() {
+function Navbar(props) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     var [count, setCount] = React.useState(); //number of notifications set as count
+    console.log(props)
 
     //Handles all the possiblity for the menu
     const handleOpenNavMenu = (event) => {

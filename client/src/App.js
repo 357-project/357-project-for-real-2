@@ -13,45 +13,65 @@ import Navbar from './Components/Navbar.js';
 import {TimePage} from "./Components/timePage";
 import HomePage from './Pages/WelcomePage';
 import Questionaire from './Pages/Questionaire';
-
 class App extends Component {
+    
     render() {
         return (
-            <div>
-            <Navbar/>
             <div>
             <Router>
                 <CssBaseline/>
                     <Switch>
                         <Route path="/MazeGame">
-                            <MazeGame/>
+                            <Navbar isLoggedIn={true}/>
+                            <div>
+                                <MazeGame/>
+                            </div>
                         </Route>
                         <Route path="/Questionaire">
-                            <Questionaire/>
+                        <Navbar isLoggedIn={true}/>
+                            <div>
+                                <Questionaire/>
+                            </div>
+                            
                         </Route>
                         <Route path="/SignIn">
-                            <SignIn/>
+                        <Navbar isLoggedIn={false}/>
+                            <div>
+                                <SignIn/>
+                            </div>
+                            
                         </Route>
                         <Route path="/SignUp">
-                            <SignUp/>
+                        <Navbar isLoggedIn={false}/>
+                            <div>
+                                <SignUp/>
+                            </div>
+                            
                         </Route>
                         <Route path="/logo">
                             <Logo/>
                         </Route>
                         <Route path="/MemoryGame">
-                            <MemoryGame/>
+                        <Navbar isLoggedIn={true}/>
+                            <div>
+                                <MemoryGame/>
+                            </div>
+                            
                         </Route>
                         <Route
                             path="/timepage"
                             component={(props) => <TimePage {...props} />}
                         />
                         <Route path="/">
-                            <HomePage/>
+                        <Navbar isLoggedIn={false}/>
+                            <div>
+                                <HomePage/>
+                            </div>
+                            
                         </Route>
                     </Switch>
                 <br/>
             </Router>
-            </div>
             <Footer/>
             </div>
         );
