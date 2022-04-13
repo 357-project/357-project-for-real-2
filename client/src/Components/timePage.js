@@ -10,7 +10,9 @@ export function TimePage(props){
         <>
             <Navbar isLoggedIn={true}/>
         <Container component="main" maxWidth="md" sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <br/>
+            <br/>
+            <br/>
+            <br/>
             <Card sx={{display: "flex",MarginTop: "3em", alignContent: "center"}}>
             <Box mx="6em" sx={{ MarginLeft: 6, MarginRight: 6,marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '1rem'}}>
                 <AccessAlarmIcon className="clockIcon"/>
@@ -22,8 +24,6 @@ export function TimePage(props){
                 <br/>
             </Box>
         </Card>
-
-        <Button sx={{size: "large"}}>CLICK WHEN DONE</Button>
     </Container>
         </>
         )

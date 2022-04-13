@@ -13,7 +13,7 @@ function MazeGame(){
     const history = useHistory();
 
     const onSubmit = ()=> {
-        const time = ((new Date().getTime() - t) / 1000);
+        const time = Math.floor((new Date().getTime() - t) / 1000);
         history.push({
             pathname: '/timepage',
             state: {time: time}
@@ -22,9 +22,9 @@ function MazeGame(){
 
         return (
                 <div className="App">
-                <Container component="main" maxWidth="xs" sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Container component="main" maxWidth="xs" sx={{ marginBottom: 6,marginTop: 12, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Card>
-                        <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '14rem', mb:'1rem'}}>
+                        <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '14rem', mb:'0rem'}}>
                             <GameER/>
                         </Box>
                     </Card>
