@@ -2,11 +2,14 @@ import * as React from 'react';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar, Card } from '@mui/material';
 import {Logo} from "./logo";
+import GetDailyGame from "../Games/DailyGame";
 
 
 
 //handling the login form
 function SignIn() {
+
+    const game = GetDailyGame();
 
     return (
             <Container component="main" maxWidth="xs">
@@ -28,7 +31,7 @@ function SignIn() {
                                 <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password"/>
                             </Grid>
                             <Grid item xs={12}>
-                                <Button type="submit" style={{backgroundColor: "#629460"}} fullWidth variant="contained" href="/MazeGame" sx={{ mt: 3, mb: 2 }}>
+                                <Button type="submit" style={{backgroundColor: "#629460"}} fullWidth variant="contained" href={game} sx={{ mt: 3, mb: 2 }}>
                                     Sign In
                                 </Button>
                             </Grid>
