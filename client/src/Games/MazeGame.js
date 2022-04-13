@@ -21,14 +21,17 @@ function MazeGame(){
     }
 
         return (
-            <div className="App">
+                <div className="App">
                 <Container component="main" maxWidth="xs" sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '14rem', mb:'1rem'}}>
-                    <GameER/>
-                    </Box>
-                    <Button sx={{size: "large"}} onClick={onSubmit}>CLICK WHEN DONE</Button>
+                    <Card>
+                        <Box sx={{ marginBottom: 6,marginTop: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', mt: '14rem', mb:'1rem'}}>
+                            <GameER/>
+                        </Box>
+                    </Card>
+                    <Button sx={{size: "large"}} size="large" variant="contained" onClick={onSubmit}>CLICK WHEN DONE</Button>
                 </Container>
             </div>
+
         );
 }
 

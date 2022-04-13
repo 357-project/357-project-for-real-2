@@ -29,3 +29,7 @@ label {
 .textField {
   color: #629460;
 }
+
+.clockIcon {
+  transform: scale(1.8);
+}

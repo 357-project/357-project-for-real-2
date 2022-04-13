@@ -35,18 +35,16 @@ class App extends Component {
                             
                         </Route>
                         <Route path="/SignIn">
-                        <Navbar isLoggedIn={false}/>
                             <div>
                                 <SignIn/>
                             </div>
                             
                         </Route>
                         <Route path="/SignUp">
-                        <Navbar isLoggedIn={false}/>
                             <div>
                                 <SignUp/>
                             </div>
-                            
+
                         </Route>
                         <Route path="/logo">
                             <Logo/>
@@ -63,11 +61,10 @@ class App extends Component {
                             component={(props) => <TimePage {...props} />}
                         />
                         <Route path="/">
-                        <Navbar isLoggedIn={false}/>
                             <div>
                                 <HomePage/>
                             </div>
-                            
+
                         </Route>
                     </Switch>
                 <br/>

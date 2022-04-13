@@ -4,8 +4,10 @@ import { Container, Box, Button, AppBar, Toolbar, IconButton, Typography, Menu, 
 // import {Logo} from "../logo";
 import { useEffect } from "react";
 
-const pages = ['Home', 'Maze Game', 'Memory Game'];
+const pages = ['MazeGame', 'MemoryGame'];
 const settings = ['Profile', 'Statistics', 'Logout'];
+
+const ConstantDate = new Date('01-01-2022');
 
 function Navbar(props) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,8 +30,14 @@ function Navbar(props) {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-   
 
+    const inDays = (d1, d2) => {
+        const t2 = d2.getTime();
+        const t1 = d1.getTime();
+        return parseInt(((t2-t1)/(24*3600*1000)));
+    }
+
+    const DailyGame = pages[Math.abs((inDays(ConstantDate,new Date()))% 2)];
 
     return (
         <AppBar>
@@ -60,14 +68,9 @@ function Navbar(props) {
                                 <Typography textAlign="center">Home</Typography>
                                 </Link>
                             </MenuItem>
-                            <MenuItem key="Maze Game" href="/MazeGame" >
-                                <Link href='/MazeGame'>
-                                <Typography textAlign="center">Maze Game</Typography>
-                                </Link>
-                            </MenuItem>
-                            <MenuItem key="Memory Game" href="/Memorygame" >
-                                <Link href='/MemoryGame'>
-                                <Typography textAlign="center">Memory Game</Typography>
+                            <MenuItem key="Daily Game" href="/MazeGame" >
+                                <Link href={DailyGame}>
+                                <Typography textAlign="center">Daily Game</Typography>
                                 </Link>
                             </MenuItem>
                             {/* {pages.map((page) => (
@@ -85,11 +88,8 @@ function Navbar(props) {
                         <Button key="Home" href="/"  sx={{ my: 2, color: 'white', display: 'block' }}>
                                 Home
                         </Button>
-                        <Button key="Maze Game" href="/MazeGame"  sx={{ my: 2, color: 'white', display: 'block' }}>
-                                Maze Game
-                        </Button>
-                        <Button key="Memory Game" href="/Memorygame"  sx={{ my: 2, color: 'white', display: 'block' }}>
-                                Memory Game
+                        <Button key="Daily Game" href={DailyGame}  sx={{ my: 2, color: 'white', display: 'block' }}>
+                                Daily Game
                         </Button>
                         {/* {pages.map((page) => (
                         <Button
