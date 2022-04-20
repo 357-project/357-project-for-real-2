@@ -10,14 +10,6 @@ function MemoryGame() {
     console.log(t);
     const history = useHistory();
     const [show, setShow] = useState(true);
-
-    //styling
-    const TilePaper = styled(Paper)(({ theme }) => ({
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.primary,
-    }));
     const colors = ['#70D6FF', '#629460', '#FF9770', '#FFD670', '#FFD670', '#FF9770', '#629460', '#629460'];
     const styles = colors.map((color) => {
         return {
