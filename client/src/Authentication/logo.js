@@ -29,7 +29,7 @@ export function Logo(props) {
             <h1 style={styles[4]}>-</h1>
             <h1 style={styles[5]}>i</h1>
             <h1 style={styles[6]}>t</h1>
-             <h1 style={styles[6]}>o</h1>
+             <h1 style={styles[0]}>o</h1>
              <img src={image} style={styles[7]}/>
 
         </div>
