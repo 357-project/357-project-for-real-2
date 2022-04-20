@@ -59,10 +59,10 @@ function MemoryGame() {
                     <Typography>Use the mouse to click on the cards to flip them and find matching pairs</Typography>
                     <Typography>Every time you flip a none-matching pair, you must restart</Typography>
                     <Typography>Try your best to flip pairs in the least numbers of clicks and as fast you can, the clock is ticking!</Typography>
+                    <Typography>Click 'CLICK WHEN DONE' to lock in your score! </Typography>
                     <Typography>✨</Typography>
                 </Box>
-                <Button size="large" variant="contained" onClick={() => setShow((s) => !s)} sx={{ marginBottom: '10px', display: show ? "none" : "block", backgroundColor: '#FFD670' }}> INSTRUCTIONS</Button>
-                <Button sx={{ size: "large", display: show ? "none" : "block" }} size="large" variant="contained" onClick={onSubmit}>CLICK WHEN DONE</Button>
+                <Button sx={{ mt:2, size: "large", display: show ? "none" : "block" }} size="large" variant="contained" onClick={onSubmit}>CLICK WHEN DONE</Button>
             </Container>
         </div>
     );
