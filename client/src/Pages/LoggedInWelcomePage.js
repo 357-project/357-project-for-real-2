@@ -1,9 +1,8 @@
 import * as React from 'react';
-import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import { Container, Typography, Box, Grid, Link, Checkbox, FormControlLabel, TextField, CssBaseline, Button, Avatar, Card } from '@mui/material';
 import {Logo} from "../Components/Logo";
 
-function HomePage(){
+function LoggedInHomePage(){
     return(
         <Container component="main" maxWidth="xs">
                 <CssBaseline />
@@ -17,20 +16,13 @@ function HomePage(){
                         Before we get started, don't forget to Sign in or sign up if you do not have an account!
                     </Typography>
                     </div>
-                    <br/>
-                    <Grid container>
-                            <Grid item xs={6}>
-                                <Button type="submit" style={{backgroundColor: "#FF9770"}} fullWidth variant="contained" href="/Signin" sx={{ mt: 3, mb: 2, mr: 10 }}>
-                                    Sign In
-                                </Button>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <Button type="submit" style={{backgroundColor: "#FFD670"}} fullWidth variant="contained" href="/Signup" sx={{ mt: 3, mb: 2 }}>
-                                    Sign Up
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    
+                    <br/><br/>
+                    <div>
+                    <Typography component="h5" variant="h5">
+                        Congratulations on completing today's challenge! Please come back tomorrow for a brand new challenge.
+                    </Typography>
+                    </div>
+                    <br/><br/><br/>
                 </Box>
         </Container>
     )
@@ -39,4 +31,4 @@ function HomePage(){
 
 }
 
-export default HomePage;
+export default LoggedInHomePage;

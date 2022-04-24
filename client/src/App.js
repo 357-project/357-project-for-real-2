@@ -6,12 +6,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import SignIn from "./Authentication/SignIn";
 import SignUp from "./Authentication/SignUp";
-import {Logo} from "./Authentication/logo";
+import {Logo} from "./Components/Logo";
 import MemoryGame from "./Games/FirstGame";
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.js';
 import {TimePage} from "./Components/timePage";
 import HomePage from './Pages/WelcomePage';
+import LoggedInHomePage from './Pages/LoggedInWelcomePage';
 import Questionaire from './Pages/Questionaire';
 class App extends Component {
     
@@ -31,6 +32,13 @@ class App extends Component {
                         <Navbar isLoggedIn={true}/>
                             <div>
                                 <Questionaire/>
+                            </div>
+                            
+                        </Route>
+                        <Route path="/home">
+                        <Navbar isLoggedIn={true}/>
+                            <div>
+                                <LoggedInHomePage/>
                             </div>
                             
                         </Route>
@@ -54,17 +62,12 @@ class App extends Component {
                             <div>
                                 <MemoryGame/>
                             </div>
-                            
                         </Route>
-                        <Route
-                            path="/timepage"
-                            component={(props) => <TimePage {...props} />}
-                        />
+                        <Route path="/timepage" component={(props) => <TimePage {...props} />}/>
                         <Route path="/">
                             <div>
                                 <HomePage/>
                             </div>
-
                         </Route>
                     </Switch>
                 <br/>

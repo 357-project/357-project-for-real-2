@@ -1,10 +1,8 @@
-import { Container, Box, CssBaseline, Link, Typography } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
-
+import { Container, Box, Link, Typography } from '@mui/material';
 
 function Footer() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '20vh', textAlign: 'center',  width:"90rem" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '20vh', textAlign: 'center', width: "90rem" }}>
       {/* Adding the theme for the footer */}
       <Box component="footer" sx={{
         py: 6, px: 2, mt: 'auto',
