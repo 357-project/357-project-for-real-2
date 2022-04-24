@@ -13,8 +13,11 @@ function HomePage(){
                     </div>
                     <div>
                     <Typography component="h5" variant="h5">
-                        The best place to learn basic programming skills that will allow you to become an amazing computer scientist in the future.
-                        Before we get started, don't forget to Sign in or sign up if you do not have an account!
+                    Hey Kids, welcome to Code-ito! A new online platform to help you improve the way you think through a series of skill-enhancing mini-games. Put your memory, decision-making and speed to the test with our maze and memory challenges! 
+                    <br/><br/>
+                    If you are interested in computers, these games can help you develop ones that are important in fields of technology and computer science!
+                    <br/><br/>
+                    ✨ Are you up for the challenge?✨
                     </Typography>
                     </div>
                     <br/>
