@@ -26,7 +26,7 @@ export function TimePage(props){
                 <br/>
                 <h1>{props.location.state.time} Seconds</h1>
                 <br/>
-                <h1>Come back tomorrow</h1>
+                <h1></h1>
                 <br/>
             </Box>
 
