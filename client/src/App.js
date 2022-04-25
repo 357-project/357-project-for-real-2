@@ -15,6 +15,7 @@ import LoggedInHomePage from './Pages/LoggedInWelcomePage';
 import Questionaire from './Pages/Questionaire';
 import { Logo } from "./Components/Logo";
 import { TimePage } from "./Components/timePage";
+import TestInstructions from "./Pages/testInstructions";
 class App extends Component {
 
     render() {
@@ -24,12 +25,7 @@ class App extends Component {
                     <CssBaseline />
                     <Switch>
                         {/* Routes for every page that can be reached on the website */}
-                        <Route path="/MazeGame">
-                            <Navbar isLoggedIn={true} />
-                            <div>
-                                <MazeGame />
-                            </div>
-                        </Route>
+                        <Route path="/MazeGame" component={(props) => <MazeGame {...props} />} />
                         <Route path="/Questionaire">
                             <Navbar isLoggedIn={true} />
                             <div>
@@ -62,6 +58,7 @@ class App extends Component {
                             <Logo />
                         </Route>
                         <Route path="/timepage" component={(props) => <TimePage {...props} />} />
+                        <Route path="/testinstructions" component={(props) => <TestInstructions {...props} />} />
                         <Route path="/">
                             <div>
                                 <HomePage />

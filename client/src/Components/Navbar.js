@@ -72,6 +72,11 @@ function Navbar(props) {
                                     <Typography textAlign="center">Daily Game</Typography>
                                 </Link>
                             </MenuItem>
+                            <MenuItem key="Test" href="/testInstructions" >
+                                <Link href="/testInstructions">
+                                    <Typography textAlign="center">Test</Typography>
+                                </Link>
+                            </MenuItem>
                         </Menu> 
 
                     </Box>
@@ -85,6 +90,9 @@ function Navbar(props) {
                         </Button>
                         <Button key="Daily Game" href={DailyGame}  sx={{ my: 2, color: 'white', display: 'block' }}>
                                 Daily Game
+                        </Button>
+                        <Button key="Test" href="/testInstructions"  sx={{ my: 2, color: 'white', display: 'block' }}>
+                            Test
                         </Button>
                     </Box>
                         {/* Displays the avatar of the user */}

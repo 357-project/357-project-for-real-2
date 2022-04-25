@@ -3,12 +3,12 @@ import { Container, Typography, Box, Button, Card } from '@mui/material';
 import { useHistory } from "react-router-dom";
 import GameER from 'phaser-maze-game';
 import '../App.css';
+import Navbar from "../Components/Navbar";
 
-function MazeGame() {
+function MazeGame(props) {
 
     // Declaring all the use states and constants
     const t = new Date().getTime();
-    console.log(t);
     const history = useHistory();
     const [show, setShow] = useState(true);
 
@@ -25,15 +25,17 @@ function MazeGame() {
 
     //clock that keeps track of the time 
     const onSubmit = () => {
+        console.log(props);
         const time = Math.floor((new Date().getTime() - t) / 1000);
         history.push({
             pathname: '/timepage',
-            state: { time: time }
+            state: { time: time, test:  props?.location?.state?.test}
         });
     }
 
     return (
         <div className="App">
+            <Navbar isLoggedIn={true} />
             {/* Mazze Game page */}
             <Container component="main" maxWidth="xl" sx={{ marginBottom: 6, marginTop: 12, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Box sx={{ display: show ? "block" : "none", flexDirection: 'column', alignItems: 'center', mt: '14rem' }}>
