@@ -58,15 +58,15 @@ class App extends Component {
                                 <MemoryGame />
                             </div>
                         </Route>
+                        <Route path="/logo">
+                            <Logo />
+                        </Route>
+                        <Route path="/timepage" component={(props) => <TimePage {...props} />} />
                         <Route path="/">
                             <div>
                                 <HomePage />
                             </div>
                         </Route>
-                        <Route path="/logo">
-                            <Logo />
-                        </Route>
-                        <Route path="/timepage" component={(props) => <TimePage {...props} />} />
                     </Switch>
                     <br />
                 </Router>
